@@ -37,8 +37,8 @@ importers:
         specifier: ^2.27.10
         version: 2.27.10
       '@dotenvx/dotenvx':
-        specifier: ^1.30.1
-        version: 1.30.1
+        specifier: ^1.31.0
+        version: 1.31.0
       '@types/node':
         specifier: ^22.10.2
         version: 22.10.2
@@ -205,8 +205,8 @@ packages:
   '@changesets/write@0.3.2':
     resolution: {integrity: sha512-kDxDrPNpUgsjDbWBvUo27PzKX4gqeKOlhibaOXDJA6kuBisGqNHv/HwGJrAu8U/dSf8ZEFIeHIPtvSlZI1kULw==}
 
-  '@dotenvx/dotenvx@1.30.1':
-    resolution: {integrity: sha512-GOwG4QJvCjRlGOsDUqer6RjKJ7i1S40k5hkiH3RhI8SwiETDOnx1i8LajmmyrQd0k3hX7van8Cv6Egii6ahH0Q==}
+  '@dotenvx/dotenvx@1.31.0':
+    resolution: {integrity: sha512-GeDxvtjiRuoyWVU9nQneId879zIyNdL05bS7RKiqMkfBSKpHMWHLoRyRqjYWLaXmX/llKO1hTlqHDmatkQAjPA==}
     hasBin: true
 
   '@ecies/ciphers@0.2.2':
@@ -3092,7 +3092,7 @@ snapshots:
       human-id: 1.0.2
       prettier: 2.8.8
 
-  '@dotenvx/dotenvx@1.30.1':
+  '@dotenvx/dotenvx@1.31.0':
     dependencies:
       commander: 11.1.0
       dotenv: 16.4.7
