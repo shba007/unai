@@ -55,7 +55,7 @@
     "pathe": "^2.0.3",
     "std-env": "^3.9.0",
     "unstorage": "^1.16.0",
-    "zod": "^3.25.67",
+    "zod": "^4.1.5",
     "zod-to-json-schema": "^3.24.5"
   },
   "devDependencies": {
