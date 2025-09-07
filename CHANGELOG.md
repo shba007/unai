@@ -132,7 +132,6 @@
 - 0c80c59: chore: add initial files and configurations for the project
 
   This commit includes the following changes:
-
   - Adds basic project files such as LICENSE, README, .gitignore, .prettierignore, etc.
   - Sets up configurations for ESLint, Prettier, Renovate, and TypeScript.
   - Adds initial test setup with Vitest.

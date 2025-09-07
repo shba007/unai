@@ -50,7 +50,7 @@ services:
       - open-webui:/app/backend/data
 
   ollama:
-    image: ollama/ollama:0.5.13-rocm
+    image: ollama/ollama:0.11.10-rocm
     restart: on-failure:3
     ports:
       - 1100:11434
@@ -58,7 +58,7 @@ services:
       - ../unai-models/models/ollama:/root/.ollama
 
   invokeai:
-    image: ghcr.io/invoke-ai/invokeai
+    image: ghcr.io/invoke-ai/invokeai:6.3-cpu
     restart: on-failure:3
     ports:
       - 1110:9090
