@@ -2,6 +2,18 @@
 
 # unai
 
+## v0.3.6
+
+[compare changes](https://github.com/shba007/unai/compare/v0.3.5...v0.3.6)
+
+### 🏡 Chore
+
+- Package.json for version upgrades and formatting improvements ([d909ff6](https://github.com/shba007/unai/commit/d909ff6))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v0.3.5
 
 [compare changes](https://github.com/shba007/unai/compare/v0.3.4...v0.3.5)
