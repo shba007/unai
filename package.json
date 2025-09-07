@@ -1,6 +1,6 @@
 {
   "name": "@shba007/unai",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Unified AI Adapter Library. For Ollama, Gemini, OpenAI, Anthropic, X",
   "author": "Shirsendu Bairagi <shirsendu2001@gmail.com>",
   "license": "MIT",
