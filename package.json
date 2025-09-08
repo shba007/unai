@@ -70,7 +70,7 @@
     "jiti": "^2.5.1",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2",
-    "unbuild": "3.5.0",
+    "unbuild": "3.6.1",
     "vitest": "^3.2.4"
   },
   "trustedDependencies": [

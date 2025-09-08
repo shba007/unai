@@ -28,7 +28,7 @@ services:
       - 2310:4200
 
   prefect-server:
-    image: prefecthq/prefect:3.2-python3.12
+    image: prefecthq/prefect:3.4-python3.12
     restart: on-failure:3
     ports:
       - '1410:4200'
@@ -58,7 +58,7 @@ services:
       - ../unai-models/models/ollama:/root/.ollama
 
   invokeai:
-    image: ghcr.io/invoke-ai/invokeai:6.3-cpu
+    image: ghcr.io/invoke-ai/invokeai:6.6-cpu
     restart: on-failure:3
     ports:
       - 1110:9090
@@ -311,7 +311,7 @@ services:
     #                       - gpu
 
   tf-serve:
-    image: 'tensorflow/serving:2.18.0'
+    image: 'tensorflow/serving:2.19.0'
     restart: on-failure:3
     ports:
       - 1310:8500
