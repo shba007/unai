@@ -338,7 +338,7 @@ services:
     command: torchserve --model-store /home/model-server/model-store --models my_model=TranslationClassifier.mar
 
   postgres:
-    image: postgres:17-alpine
+    image: postgres:18-alpine
     command: '-d 1'
     volumes:
       - db-data:/var/lib/postgresql/data
