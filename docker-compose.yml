@@ -50,7 +50,7 @@ services:
       - open-webui:/app/backend/data
 
   ollama:
-    image: ollama/ollama:0.11.10-rocm
+    image: ollama/ollama:0.13.3-rocm
     restart: on-failure:3
     ports:
       - 1100:11434
@@ -58,7 +58,7 @@ services:
       - ../unai-models/models/ollama:/root/.ollama
 
   invokeai:
-    image: ghcr.io/invoke-ai/invokeai:6.3-cpu
+    image: ghcr.io/invoke-ai/invokeai:6.9-cpu
     restart: on-failure:3
     ports:
       - 1110:9090
@@ -311,7 +311,7 @@ services:
     #                       - gpu
 
   tf-serve:
-    image: 'tensorflow/serving:2.18.0'
+    image: 'tensorflow/serving:2.19.0'
     restart: on-failure:3
     ports:
       - 1310:8500
@@ -338,7 +338,7 @@ services:
     command: torchserve --model-store /home/model-server/model-store --models my_model=TranslationClassifier.mar
 
   postgres:
-    image: postgres:17-alpine
+    image: postgres:18-alpine
     command: '-d 1'
     volumes:
       - db-data:/var/lib/postgresql/data
