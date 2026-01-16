@@ -59,7 +59,7 @@
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
     "@dotenvx/dotenvx": "^1.51.2",
-    "@types/node": "^24.10.4",
+    "@types/node": "^25.0.9",
     "@vitest/coverage-v8": "^4.0.15",
     "eslint": "^9.39.2",
     "eslint-config-unjs": "^0.5.0",
