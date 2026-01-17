@@ -2,6 +2,19 @@
 
 # unai
 
+## v0.3.8
+
+[compare changes](https://github.com/shba007/unai/compare/v0.3.7...v0.3.8)
+
+### 🏡 Chore
+
+- Update docker images and dependencies ([637a172](https://github.com/shba007/unai/commit/637a172))
+- Update package dependencies and package manager version ([74844e3](https://github.com/shba007/unai/commit/74844e3))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v0.3.7
 
 [compare changes](https://github.com/shba007/unai/compare/v0.3.6...v0.3.7)
