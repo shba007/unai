@@ -52,23 +52,23 @@
     "pathe": "^2.0.3",
     "std-env": "^3.10.0",
     "unstorage": "^1.17.4",
-    "zod": "^4.3.5",
+    "zod": "^4.3.6",
     "zod-to-json-schema": "^3.25.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.3.1",
     "@commitlint/config-conventional": "^20.3.1",
-    "@dotenvx/dotenvx": "^1.51.4",
-    "@types/node": "^25.0.9",
-    "@vitest/coverage-v8": "^4.0.17",
+    "@dotenvx/dotenvx": "^1.52.0",
+    "@types/node": "^25.1.0",
+    "@vitest/coverage-v8": "^4.0.18",
     "eslint": "^9.39.2",
     "eslint-config-unjs": "^0.6.2",
     "husky": "^9.1.7",
     "jiti": "^2.6.1",
-    "prettier": "^3.8.0",
+    "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1",
-    "vitest": "^4.0.17"
+    "vitest": "^4.0.18"
   },
   "trustedDependencies": [
     "@parcel/watcher"
