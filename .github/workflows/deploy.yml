@@ -6,7 +6,6 @@ permissions:
   packages: write
   attestations: write
   id-token: write
-  pages: write
 
 on:
   release:
@@ -16,6 +15,10 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref_name }}
   cancel-in-progress: true
+
+env:
+  REPO: ${{ github.repository }}
+  VERSION: ${{ github.ref_name }}
 
 jobs:
   publish:
@@ -40,8 +43,6 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-          registry-url: ${{ matrix.registry.url }}
-          scope: ${{ matrix.registry.scope }}
 
       - name: 📦 Install Dependencies
         run: bun install --frozen-lockfile
