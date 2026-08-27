@@ -62,13 +62,7 @@ type TextGenerateXModel = '@X/grok-2:1212' | '@X/grok-2:latest' | '@X/grok-2-vis
 type TextGenerateGroqModel = '@Groq/llama3-70b-8192'
 
 export type TextGenerateModel =
-  | TextGenerateOllamaModel
-  | TextGenerateGoogleModel
-  | TextGenerateOpenAIModel
-  | TextGeneratePerplexityModel
-  | TextGenerateAnthropicModel
-  | TextGenerateXModel
-  | TextGenerateGroqModel
+  TextGenerateOllamaModel | TextGenerateGoogleModel | TextGenerateOpenAIModel | TextGeneratePerplexityModel | TextGenerateAnthropicModel | TextGenerateXModel | TextGenerateGroqModel
 
 export async function textGenerate<T = string>(model: TextGenerateModel, params: Params, debugCallback?: (body: object) => void) {
   let result:
