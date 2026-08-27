@@ -2,6 +2,19 @@
 
 # unai
 
+## v0.3.10
+
+[compare changes](https://github.com/shba007/unai/compare/v0.3.9...v0.3.10)
+
+### 🏡 Chore
+
+- Update package dependencies and package manager version ([c80ea6c](https://github.com/shba007/unai/commit/c80ea6c))
+- Upgrade actions/checkout to v7 in workflows and update dependencies ([8c62ca1](https://github.com/shba007/unai/commit/8c62ca1))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v0.3.9
 
 [compare changes](https://github.com/shba007/unai/compare/v0.3.8...v0.3.9)
