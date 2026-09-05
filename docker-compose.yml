@@ -50,7 +50,7 @@ services:
       - open-webui:/app/backend/data
 
   ollama:
-    image: ollama/ollama:0.13.3-rocm
+    image: ollama/ollama:0.33.3-rocm@sha256:5ca37b5898b84dc522f98927910d43d440acbed3774888267ea91a8452649c14
     restart: on-failure:3
     ports:
       - 1100:11434
@@ -311,7 +311,7 @@ services:
     #                       - gpu
 
   tf-serve:
-    image: 'tensorflow/serving:2.19.0'
+    image: 'tensorflow/serving:2.20.0@sha256:8a208c2322975a1bf04d9c70f2138ef38517bca966d4bd7816ded34e0a9bb257'
     restart: on-failure:3
     ports:
       - 1310:8500
