@@ -40,7 +40,7 @@ services:
     command: ['prefect', 'server', 'start']
 
   open-webui:
-    image: ghcr.io/open-webui/open-webui:main
+    image: ghcr.io/open-webui/open-webui:main@sha256:1a6399d237dc392a2313e0ca826020b3fd5d22536357840eb63393d18dc8b924
     restart: on-failure:3
     ports:
       - 1101:8080
@@ -50,7 +50,7 @@ services:
       - open-webui:/app/backend/data
 
   ollama:
-    image: ollama/ollama:0.13.3-rocm
+    image: ollama/ollama:0.13.3-rocm@sha256:e49d21dfbf72b5fea88b512c83d41764de462b3efd059f625d3a1d2a855852ed
     restart: on-failure:3
     ports:
       - 1100:11434
@@ -75,7 +75,7 @@ services:
       - ../unai-models/models/invokeai:/app/invokeai
 
   imagebind:
-    image: r8.im/daanelson/imagebind
+    image: r8.im/daanelson/imagebind@sha256:0383f62e173dc821ec52663ed22a076d9c970549c209666ac3db181618b7a304
     restart: on-failure:3
     ports:
       - 1200:5000
@@ -90,7 +90,7 @@ services:
     #                       - gpu
 
   grounding-dino:
-    image: r8.im/adirik/grounding-dino
+    image: r8.im/adirik/grounding-dino@sha256:efd10a8ddc57ea28773327e881ce95e20cc1d734c589f7dd01d2036921ed78aa
     restart: on-failure:3
     ports:
       - 1201:5000
@@ -105,7 +105,7 @@ services:
     #                       - gpu
 
   deepseek-ai-deepseek-vl2-small:
-    image: registry.hf.space/deepseek-ai-deepseek-vl2-small:latest
+    image: registry.hf.space/deepseek-ai-deepseek-vl2-small:latest@sha256:916558d842ce406ef5d7c257b522317ce8d4f27c2567cf0b9cae685defde1a28
     stdin_open: true
     tty: true
     ports:
@@ -121,7 +121,7 @@ services:
     #             - gpu
     command: python app.py
   yonigozlan-got-ocr-transformers:
-    image: registry.hf.space/yonigozlan-got-ocr-transformers:latest
+    image: registry.hf.space/yonigozlan-got-ocr-transformers:latest@sha256:6c2cb180d0014ffb9060bbac540e4081dba1e4b62ad1451fa50a14afe7c28df0
     stdin_open: true
     tty: true
     ports:
@@ -155,7 +155,7 @@ services:
     command: python app.py
 
   ahkamboh-change-cloth-ai:
-    image: registry.hf.space/ahkamboh-change-cloth-ai:latest
+    image: registry.hf.space/ahkamboh-change-cloth-ai:latest@sha256:6d8993385ac0d494dae7897bb9e62f4bf5edeb456d6c6af54bb9d03d3df1ade3
     platform: linux/amd64
     stdin_open: true
     tty: true
@@ -166,7 +166,7 @@ services:
     command: python app.py
 
   usmanyousaf-virtual-dressup:
-    image: registry.hf.space/usmanyousaf-virtual-dressup:latest
+    image: registry.hf.space/usmanyousaf-virtual-dressup:latest@sha256:6bdba3f4b84423562648739f5aa5068c39178b745cf2d85a226c668167149257
     platform: linux/amd64
     stdin_open: true
     tty: true
@@ -175,7 +175,7 @@ services:
     command: streamlit run app.py
 
   mrfreak72-dressifyfullbody:
-    image: registry.hf.space/mrfreak72-dressifyfullbody:latest
+    image: registry.hf.space/mrfreak72-dressifyfullbody:latest@sha256:d3ae14d2b169b72a91b01afbe7de2a558f21801dbb207fcc3dfc3ad96926cf02
     platform: linux/amd64
     ports:
       - 1214:7860
@@ -184,7 +184,7 @@ services:
     command: python app.py
 
   louu007-issatm-vto:
-    image: registry.hf.space/louu007-issatm-vto:latest
+    image: registry.hf.space/louu007-issatm-vto:latest@sha256:5b0da5fee8b1d73b48d19341b419d31de0e1ca7f4965e5b43d91abf88ab1fbea
     platform: linux/amd64
     stdin_open: true
     tty: true
@@ -210,7 +210,7 @@ services:
     command: python app.py
 
   pramallc-ben2:
-    image: registry.hf.space/pramallc-ben2:latest
+    image: registry.hf.space/pramallc-ben2:latest@sha256:d8bd2ca59ec0e215123faba88f3f5414b7febadc096624c7944db81e6a99d20e
     stdin_open: true
     tty: true
     ports:
@@ -227,7 +227,7 @@ services:
     command: python app.py
 
   sonitranslate:
-    image: registry.hf.space/r3gm-sonitranslate-translate-audio-of-a-video-content:latest
+    image: registry.hf.space/r3gm-sonitranslate-translate-audio-of-a-video-content:latest@sha256:f99593ca2abef95ad3ad303ce6c3cd1162e3a0e1e2974182b6163bf389c8a3a2
     stdin_open: true
     tty: true
     ports:
@@ -249,7 +249,7 @@ services:
     command: python app_rvc.py
 
   steveeeeeeen-zonos:
-    image: registry.hf.space/steveeeeeeen-zonos:latest
+    image: registry.hf.space/steveeeeeeen-zonos:latest@sha256:782d47718443cb2ebc7e8942d65435340473f27d8f8aa0ff1d357c8a3a67e5eb
     stdin_open: true
     tty: true
     ports:
@@ -266,7 +266,7 @@ services:
     command: python app.py
 
   kokoro:
-    image: r8.im/jaaari/kokoro-82m
+    image: r8.im/jaaari/kokoro-82m@sha256:f559560eb822dc509045f3921a1921234918b91739db4bf3daab2169b71c7a13
     restart: on-failure:3
     ports:
       - 1202:5000
@@ -281,7 +281,7 @@ services:
     #                       - gpu
 
   seamless-communication:
-    image: r8.im/cjwbw/seamless_communication
+    image: r8.im/cjwbw/seamless_communication@sha256:668a4fec05a887143e5fe8d45df25ec4c794dd43169b9a11562309b2d45873b0
     restart: on-failure:3
     ports:
       - 1203:5000
@@ -296,7 +296,7 @@ services:
     #                       - gpu
 
   realistic-voice-cloning:
-    image: r8.im/zsxkib/realistic-voice-cloning
+    image: r8.im/zsxkib/realistic-voice-cloning@sha256:0a9c7c558af4c0f20667c1bd1260ce32a2879944a0b9e44e1398660c077b1550
     restart: on-failure:3
     ports:
       - 1204:5000
@@ -311,7 +311,7 @@ services:
     #                       - gpu
 
   tf-serve:
-    image: 'tensorflow/serving:2.19.0'
+    image: 'tensorflow/serving:2.19.0@sha256:289a8ca157c7873098c49484ef6de53940f7443140a66a1cec5613181be18a53'
     restart: on-failure:3
     ports:
       - 1310:8500
@@ -323,7 +323,7 @@ services:
     command: '--model_config_file=/models/models.config'
 
   torchserve:
-    image: pytorch/torchserve:0.12.0-cpu
+    image: pytorch/torchserve:0.12.0-cpu@sha256:50e189492f630a56214dce45ec6fd8db3ad45845890c0e8c26b469c6b06ca4fe
     restart: on-failure:3
     ports:
       - 1320:8080
@@ -338,7 +338,7 @@ services:
     command: torchserve --model-store /home/model-server/model-store --models my_model=TranslationClassifier.mar
 
   postgres:
-    image: postgres:18-alpine
+    image: postgres:18-alpine@sha256:d3e1620b530c944afa6e887d22eb899824da68e19c52024bf98f5220c88a65b2
     command: '-d 1'
     volumes:
       - db-data:/var/lib/postgresql/data
