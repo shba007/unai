@@ -2,6 +2,21 @@
 
 # unai
 
+## v0.3.10
+
+### 💅 Refactors
+
+- Standardize code formatting and improve readability across multiple files ([1e8c18d](https://github.com/shba007/unai/commit/1e8c18d))
+
+### 🏡 Chore
+
+- Apply code fixes [skip ci] ([bad8582](https://github.com/shba007/unai/commit/bad8582))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+- Shirsendu Bairagi <shirsendu2001@gmail.com>
+
 ## v0.3.9
 
 [compare changes](https://github.com/shba007/unai/compare/v0.3.8...v0.3.9)
