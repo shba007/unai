@@ -1,14 +1,14 @@
-import { describe, expect, test } from 'vitest'
-import { initAI } from '../src'
+import { describe, expect, test } from "vitest";
+import { initAI } from "../src";
 
-describe('Text Generate', () => {
-  const ai = initAI()
+describe("Text Generate", () => {
+  const ai = initAI();
 
-  test('Sanity Test', async () => {
-    expect(true).toBe(true)
-  })
+  test("Sanity Test", async () => {
+    expect(true).toBe(true);
+  });
 
-  /*   test('Ollama', async () => {
+  /*   Test('Ollama', async () => {
       // Run the AI text generation with a set of messages.
       const result = await ai.run(
         'text-generate',
@@ -41,94 +41,94 @@ describe('Text Generate', () => {
       console.log({ result: result.content });
     }); */
 
-  test('Gemini', async () => {
+  test("Gemini", async () => {
     // Run the AI text generation with a set of messages.
-    const result = await ai.run('text-generate', '@Google/gemini-1.5-flash-8b', {
+    const result = await ai.run("text-generate", "@Google/gemini-1.5-flash-8b", {
       messages: [
         {
-          role: 'system',
-          content: 'reply in one word',
+          content: "reply in one word",
+          role: "system",
         },
         {
-          role: 'user',
-          content: 'What is the tree color',
+          content: "What is the tree color",
+          role: "user",
         },
         {
-          role: 'assistant',
-          content: 'Green',
+          content: "Green",
+          role: "assistant",
         },
         {
-          role: 'user',
-          content: 'What is the sky color',
+          content: "What is the sky color",
+          role: "user",
         },
       ],
-    })
+    });
 
-    expect(result).toHaveProperty('content')
-    expect(result.content).toMatch(/blue/i)
+    expect(result).toHaveProperty("content");
+    expect(result.content).toMatch(/blue/i);
 
-    console.log({ result: result.content })
-  })
+    console.log({ result: result.content });
+  });
 
-  test('OpenAI', async () => {
+  test("OpenAI", async () => {
     // Run the AI text generation with a set of messages.
-    const result = await ai.run('text-generate', '@OpenAI/o3-mini:latest', {
+    const result = await ai.run("text-generate", "@OpenAI/o3-mini:latest", {
       messages: [
         {
-          role: 'system',
-          content: 'reply in one word',
+          content: "reply in one word",
+          role: "system",
         },
         {
-          role: 'user',
-          content: 'What is the tree color',
+          content: "What is the tree color",
+          role: "user",
         },
         {
-          role: 'assistant',
-          content: 'Green',
+          content: "Green",
+          role: "assistant",
         },
         {
-          role: 'user',
-          content: 'What is the sky color',
+          content: "What is the sky color",
+          role: "user",
         },
       ],
-    })
+    });
 
-    expect(result).toHaveProperty('content')
-    expect(result.content).toMatch(/blue/i)
+    expect(result).toHaveProperty("content");
+    expect(result.content).toMatch(/blue/i);
 
-    console.log({ result: result.content })
-  })
+    console.log({ result: result.content });
+  });
 
-  test('Perplexity', async () => {
+  test("Perplexity", async () => {
     // Run the AI text generation with a set of messages.
-    const result = await ai.run('text-generate', '@Perplexity/sonar', {
+    const result = await ai.run("text-generate", "@Perplexity/sonar", {
       messages: [
         {
-          role: 'system',
-          content: 'reply in one word',
+          content: "reply in one word",
+          role: "system",
         },
         {
-          role: 'user',
-          content: 'What is the tree color',
+          content: "What is the tree color",
+          role: "user",
         },
         {
-          role: 'assistant',
-          content: 'Green',
+          content: "Green",
+          role: "assistant",
         },
         {
-          role: 'user',
-          content: 'What is the sky color',
+          content: "What is the sky color",
+          role: "user",
         },
       ],
-    })
+    });
 
-    expect(result).toHaveProperty('content')
-    expect(result.content).toMatch(/blue/i)
+    expect(result).toHaveProperty("content");
+    expect(result.content).toMatch(/blue/i);
 
-    console.log({ result: result.content })
-  })
+    console.log({ result: result.content });
+  });
 
-  /*test('Anthropic', async () => {
+  /*Test('Anthropic', async () => {
      // Run the AI text generation with a set of messages.
      const result = await ai.run(
        'text-generate',
@@ -161,57 +161,57 @@ describe('Text Generate', () => {
      console.log({ result: result.content }); 
   });*/
 
-  test('Grok', async () => {
+  test("Grok", async () => {
     // Run the AI text generation with a set of messages.
-    const result = await ai.run('text-generate', '@X/grok-2:1212', {
+    const result = await ai.run("text-generate", "@X/grok-2:1212", {
       messages: [
         {
-          role: 'system',
-          content: 'reply in one word',
+          content: "reply in one word",
+          role: "system",
         },
         {
-          role: 'user',
-          content: 'What is the tree color',
+          content: "What is the tree color",
+          role: "user",
         },
         {
-          role: 'assistant',
-          content: 'Green',
+          content: "Green",
+          role: "assistant",
         },
         {
-          role: 'user',
-          content: 'What is the sky color',
+          content: "What is the sky color",
+          role: "user",
         },
       ],
-    })
+    });
 
-    expect(result).toHaveProperty('content')
-    expect(result.content).toMatch(/blue/i)
+    expect(result).toHaveProperty("content");
+    expect(result.content).toMatch(/blue/i);
 
-    console.log({ result: result.content })
-  })
+    console.log({ result: result.content });
+  });
 
-  test('Groq', async () => {
+  test("Groq", async () => {
     // Run the AI text generation with a set of messages.
-    const result = await ai.run('text-generate', '@Groq/llama3-70b-8192', {
+    const result = await ai.run("text-generate", "@Groq/llama3-70b-8192", {
       messages: [
         {
-          role: 'user',
-          content: 'What is the tree color',
+          content: "What is the tree color",
+          role: "user",
         },
         {
-          role: 'assistant',
-          content: 'Green',
+          content: "Green",
+          role: "assistant",
         },
         {
-          role: 'user',
-          content: 'What is the sky color',
+          content: "What is the sky color",
+          role: "user",
         },
       ],
-    })
+    });
 
-    expect(result).toHaveProperty('content')
-    expect(result.content).toMatch(/blue/i)
+    expect(result).toHaveProperty("content");
+    expect(result.content).toMatch(/blue/i);
 
-    console.log({ result: result.content })
-  })
-})
+    console.log({ result: result.content });
+  });
+});

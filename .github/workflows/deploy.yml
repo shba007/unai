@@ -27,11 +27,11 @@ jobs:
       matrix:
         registry:
           - url: https://npm.pkg.github.com
-            token: 'GITHUB_TOKEN'
-            scope: '@${{ github.repository_owner }}'
+            token: "GITHUB_TOKEN"
+            scope: "@${{ github.repository_owner }}"
           - url: https://registry.npmjs.org
-            token: 'NPM_TOKEN'
-            scope: '@${{ github.repository_owner }}'
+            token: "NPM_TOKEN"
+            scope: "@${{ github.repository_owner }}"
 
     steps:
       - name: 📥 Checkout Repo

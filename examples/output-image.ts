@@ -1,9 +1,8 @@
-import { initAI } from '../src'
+import { initAI } from "../src";
 
-const ai = initAI()
+const ai = initAI(),
+  result = await ai.run("image-generation", "@Google/gemini-1.5-flash-8b", {
+    prompt: "Draw a sky",
+  });
 
-const result = await ai.run('image-generation', '@Google/gemini-1.5-flash-8b', {
-  prompt: 'Draw a sky',
-})
-
-console.log({ result: result.content })
+console.log({ result: result.content });

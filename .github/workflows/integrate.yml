@@ -48,7 +48,7 @@ jobs:
       - name: 🤖 AutoFix Code
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: 'chore: apply code fixes [skip ci]'
+          commit_message: "chore: apply code fixes [skip ci]"
 
       - name: 🏷️ Bump Version
         id: bump_version
@@ -63,9 +63,9 @@ jobs:
       - name: 🔀 Create or Update Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
-          commit-message: 'ci(release): update version'
-          title: 'ci(release): update version'
+          commit-message: "ci(release): update version"
+          title: "ci(release): update version"
           body: ${{ env.CHANGELOG_CONTENT }}
-          branch: 'release/update-version'
-          base: 'develop'
+          branch: "release/update-version"
+          base: "develop"
           delete-branch: true

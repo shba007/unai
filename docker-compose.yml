@@ -1,4 +1,4 @@
-name: 'unai-dev'
+name: "unai-dev"
 services:
   web:
     # image: 'ghcr.io/shba007/unai-web:latest'
@@ -31,13 +31,13 @@ services:
     image: prefecthq/prefect:3.2-python3.12
     restart: on-failure:3
     ports:
-      - '1410:4200'
+      - "1410:4200"
     environment:
-      PREFECT_API_URL: 'http://localhost:1410/api'
-      PREFECT_SERVER_API_HOST: '0.0.0.0'
-      PREFECT_API_DATABASE_CONNECTION_URL: 'postgresql+asyncpg://postgres:postgres@postgres:5432/main'
+      PREFECT_API_URL: "http://localhost:1410/api"
+      PREFECT_SERVER_API_HOST: "0.0.0.0"
+      PREFECT_API_DATABASE_CONNECTION_URL: "postgresql+asyncpg://postgres:postgres@postgres:5432/main"
       PREFECT_API_DATABASE_MIGRATE_ON_START: True
-    command: ['prefect', 'server', 'start']
+    command: ["prefect", "server", "start"]
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
@@ -311,7 +311,7 @@ services:
     #                       - gpu
 
   tf-serve:
-    image: 'tensorflow/serving:2.19.0'
+    image: "tensorflow/serving:2.19.0"
     restart: on-failure:3
     ports:
       - 1310:8500
@@ -320,7 +320,7 @@ services:
       - type: bind
         source: ../unai-models/dist/models
         target: /models
-    command: '--model_config_file=/models/models.config'
+    command: "--model_config_file=/models/models.config"
 
   torchserve:
     image: pytorch/torchserve:0.12.0-cpu
@@ -339,7 +339,7 @@ services:
 
   postgres:
     image: postgres:18-alpine
-    command: '-d 1'
+    command: "-d 1"
     volumes:
       - db-data:/var/lib/postgresql/data
     environment:
@@ -347,7 +347,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=main
     healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
       timeout: 5s
       retries: 5

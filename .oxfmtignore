@@ -8,18 +8,30 @@ node_modules
 package.json
 bun.lock
 
+# Config files
+.oxlintrc.json
+oxfmtrc.json
+.oxfmtignore
+
 # Logs
 logs
 *.log
+dump-body.json
 
-# Test
-coverage
+# Documentation
+docs
 
 # Misc
 .DS_Store
 .fleet
 .idea
 
+# Test
+coverage
+
 # Env files
 .env*
 !.env.example
+
+# Temporary Files
+temp

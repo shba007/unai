@@ -32,32 +32,32 @@ Code:
 **No Stream**
 
 ```ts
-import { initAI } from '@shba007/unai'
+import { initAI } from "@shba007/unai";
 
-const ai = initAI()
+const ai = initAI();
 
-const result = await ai.run('@Google/gemini-1.5-flash-8b', {
-  prompt: 'What is the sky color',
-})
+const result = await ai.run("@Google/gemini-1.5-flash-8b", {
+  prompt: "What is the sky color",
+});
 
-console.log({ result: result.content })
+console.log({ result: result.content });
 ```
 
 **Stream**
 
 ```ts
-import { initAI, readStream } from '@shba007/unai'
+import { initAI, readStream } from "@shba007/unai";
 
-const ai = initAI()
+const ai = initAI();
 
-const result = await ai.run('@Google/gemini-1.5-flash-8b', {
-  prompt: 'write 1 to 100',
+const result = await ai.run("@Google/gemini-1.5-flash-8b", {
+  prompt: "write 1 to 100",
   stream: true,
-})
+});
 
 readStream(result.content, ({ delta, total }) => {
-  process.stdout.write(delta)
-})
+  process.stdout.write(delta);
+});
 ```
 
 ## Todo

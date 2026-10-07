@@ -1,0 +1,30 @@
+{
+  "$schema": "https://oxc.rs/schemas/config/oxlintrc.json",
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "pedantic": "off",
+    "perf": "warn",
+    "style": "off",
+    "restriction": "off"
+  },
+  "rules": {
+    "typescript/ban-ts-comment": "off",
+    "unicorn/no-anonymous-default-export": "off",
+    "unicorn/consistent-function-scoping": "off",
+    "no-await-in-loop": "off"
+  },
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "ignorePatterns": [
+    "dist",
+    "node_modules",
+    "temp",
+    "coverage",
+    "docs",
+    "**/*.md",
+    "dump-body.json"
+  ]
+}
